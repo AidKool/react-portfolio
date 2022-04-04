@@ -9,11 +9,7 @@ function Header() {
 
   return (
     <header>
-      <nav
-        className="navbar is-light"
-        role="navigation"
-        aria-label="main navigation"
-      >
+      <nav className="navbar is-light" role="navigation" aria-label="main navigation">
         <div className="container">
           <div className="navbar-brand">
             <div
@@ -24,19 +20,14 @@ function Header() {
               aria-expanded="false"
               data-target="navbar-menu"
               onClick={toggleMenu}
-              onKeyPress={toggleMenu}
-            >
+              onKeyPress={toggleMenu}>
               <span aria-hidden="true" />
               <span aria-hidden="true" />
               <span aria-hidden="true" />
             </div>
           </div>
 
-          <div
-            className={
-              showMenu ? 'navbar-menu mr-0 is-active' : 'navbar-menu mr-0'
-            }
-          >
+          <div className={showMenu ? 'navbar-menu mr-0 is-active' : 'navbar-menu mr-0'}>
             <div className="navbar-end">
               <div className="navbar-item">
                 <a href="#about">About me</a>
