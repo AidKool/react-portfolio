@@ -10,7 +10,7 @@ function Header() {
   return (
     <header>
       <nav className="navbar is-light" role="navigation" aria-label="main navigation">
-        <div className="container">
+        <div className="container px-2">
           <div className="navbar-brand">
             <div
               role="button"
@@ -27,7 +27,7 @@ function Header() {
             </div>
           </div>
 
-          <div className={showMenu ? 'navbar-menu mr-0 is-active' : 'navbar-menu mr-0'}>
+          <div className={showMenu ? 'navbar-menu is-active' : 'navbar-menu'}>
             <div className="navbar-end">
               <div className="navbar-item">
                 <a href="#about">About me</a>
