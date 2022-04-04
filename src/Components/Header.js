@@ -1,9 +1,10 @@
 import React from 'react';
 
 function Header() {
+  const [showMenu, setShowMenu] = React.useState(false);
+
   function toggleMenu() {
-    const menuElement = document.querySelector('.navbar-menu');
-    menuElement.classList.toggle('is-active');
+    setShowMenu(!showMenu);
   }
 
   return (
@@ -30,7 +31,8 @@ function Header() {
               <span aria-hidden="true" />
             </div>
           </div>
-          <div className="navbar-menu">
+
+          <div className={showMenu ? 'navbar-menu is-active' : 'navbar-menu'}>
             <div className="navbar-end">
               <div className="navbar-item">
                 <a href="#about">About me</a>
