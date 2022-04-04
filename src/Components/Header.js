@@ -32,7 +32,11 @@ function Header() {
             </div>
           </div>
 
-          <div className={showMenu ? 'navbar-menu is-active' : 'navbar-menu'}>
+          <div
+            className={
+              showMenu ? 'navbar-menu mr-0 is-active' : 'navbar-menu mr-0'
+            }
+          >
             <div className="navbar-end">
               <div className="navbar-item">
                 <a href="#about">About me</a>
