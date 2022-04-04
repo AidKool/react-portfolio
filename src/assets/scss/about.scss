@@ -1,0 +1,7 @@
+.about-section {
+  min-height: calc(100vh - 120px)
+}
+
+.about-section > * {
+  min-height: 100% !important;
+}
