@@ -13,9 +13,8 @@ function About() {
             <img src={profilePicture} alt="me" />
           </figure>
           <h1 className="title has-text-centered my-4">Hi, I&rsquo;m Jordi</h1>
-          <p className="subtitle has-text-centered my-4">
-            Final year CIS student and Full Stack Developer with a keen interest in Blockchain technology.
-          </p>
+          <p className="subtitle has-text-centered my-4">Final year CIS student</p>
+          <p className="subtitle has-text-centered my-4">Full Stack Developer</p>
         </div>
         <section className="bio">
           <article className="content">
