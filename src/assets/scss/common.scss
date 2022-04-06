@@ -1,0 +1,19 @@
+// custom variables
+$vh: 100vh;
+$content-max-width: 960px;
+
+.about-section,
+.portfolio-section,
+.contact-section {
+  min-height: calc($vh - 120px);
+}
+
+.flex-gap {
+  gap: $vh / 20;
+}
+
+.about-section,
+.portfolio-section,
+.contact-section {
+  max-width: $content-max-width;
+}

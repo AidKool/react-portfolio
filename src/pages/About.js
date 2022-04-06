@@ -6,7 +6,7 @@ import '../assets/scss/about.scss';
 
 function About() {
   return (
-    <section className="about-section is-flex is-align-items-center is-justify-content-center">
+    <section className="about-section is-flex is-align-items-center is-justify-content-center mx-auto">
       <div className="container is-flex is-flex-direction-column is-vcentered flex-gap px-3">
         <div className="intro">
           <figure className="profile-picture is-flex is-justify-content-center">
