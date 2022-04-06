@@ -1,5 +1,6 @@
-// custom navbar breakpoint
+// custom bulma
 $navbar-breakpoint: 768px;
+$container-max-width: 1120px;
 
 // bulma
 @import '../../../node_modules/bulma/bulma.sass';
