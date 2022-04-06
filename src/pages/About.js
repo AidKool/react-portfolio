@@ -1,8 +1,8 @@
 import React from 'react';
 
-import skills from '../../data/skills';
-import profilePicture from '../../assets/images/profile-picture.png';
-import '../../assets/scss/about.scss';
+import skills from '../data/skills';
+import profilePicture from '../assets/images/profile-picture.png';
+import '../assets/scss/about.scss';
 
 function About() {
   return (
