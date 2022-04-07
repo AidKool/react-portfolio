@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function Navigation() {
+function Navigation({ currentPage, setCurrentPage }) {
   const [showMenu, setShowMenu] = React.useState(false);
 
   function toggleMenu() {
@@ -27,24 +28,37 @@ function Navigation() {
         </div>
 
         <div className={showMenu ? 'navbar-menu is-active' : 'navbar-menu'}>
-          <div className="navbar-end">
-            <div className="navbar-item">
-              <a href="#about">About me</a>
-            </div>
-            <div className="navbar-item">
-              <a href="#portfolio">Portfolio</a>
-            </div>
-            <div className="navbar-item">
-              <a href="#contact">Contact</a>
-            </div>
-            <div className="navbar-item">
-              <a href="#resume">Resume</a>
-            </div>
-          </div>
+          <ul className="navbar-end">
+            <li className={currentPage === 'about' ? 'has-background-dark navbar-item' : 'navbar-item'}>
+              <a href="#about" onClick={() => setCurrentPage('about')}>
+                About me
+              </a>
+            </li>
+            <li className={currentPage === 'portfolio' ? 'has-background-dark navbar-item' : 'navbar-item'}>
+              <a href="#portfolio" onClick={() => setCurrentPage('portfolio')}>
+                Portfolio
+              </a>
+            </li>
+            <li className={currentPage === 'contact' ? 'has-background-dark navbar-item' : 'navbar-item'}>
+              <a href="#contact" onClick={() => setCurrentPage('contact')}>
+                Contact
+              </a>
+            </li>
+            <li className={currentPage === 'resume' ? 'has-background-dark navbar-item' : 'navbar-item'}>
+              <a href="#resume" onClick={() => setCurrentPage('resume')}>
+                Resume
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
   );
 }
+
+Navigation.propTypes = {
+  currentPage: PropTypes.string.isRequired,
+  setCurrentPage: PropTypes.func.isRequired,
+};
 
 export default Navigation;

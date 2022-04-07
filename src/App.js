@@ -4,22 +4,18 @@ import './assets/scss/reset.scss';
 import './assets/scss/common.scss';
 
 import Header from './Components/Header';
-import About from './pages/About';
-import Portfolio from './pages/Portfolio';
-import Contact from './pages/Contact';
-import Resume from './pages/Resume';
+import Main from './Components/Main';
 import Footer from './Components/Footer';
 
 function App() {
+  const [currentPage, setCurrentPage] = React.useState('about');
+
   return (
-    <main>
-      <Header />
-      {/* <About /> */}
-      {/* <Portfolio /> */}
-      {/* <Contact /> */}
-      <Resume />
+    <>
+      <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      <Main currentPage={currentPage} />
       <Footer />
-    </main>
+    </>
   );
 }
 
