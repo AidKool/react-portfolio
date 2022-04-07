@@ -17,12 +17,12 @@ function Qualifications() {
                 <p>
                   {qualification.school}: {qualification.date}
                 </p>
-                {qualification.completed ? (
+                {qualification.certificate === 'pending' ? (
+                  <p>No certificate available</p>
+                ) : (
                   <p>
                     View my <a href={qualification.certificate}>certificate</a>
                   </p>
-                ) : (
-                  <p>No certificate available</p>
                 )}
               </main>
             </article>
