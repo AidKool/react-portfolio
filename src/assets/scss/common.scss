@@ -4,16 +4,12 @@ $content-max-width: 960px;
 
 .about-section,
 .portfolio-section,
-.contact-section {
+.contact-section,
+.resume-section {
   min-height: calc($vh - 120px);
+  max-width: $content-max-width;
 }
 
 .flex-gap {
   gap: $vh / 20;
-}
-
-.about-section,
-.portfolio-section,
-.contact-section {
-  max-width: $content-max-width;
 }
