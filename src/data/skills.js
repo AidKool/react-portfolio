@@ -43,6 +43,10 @@ const skills = [
     id: 11,
     text: 'Java',
   },
+  {
+    id: 12,
+    text: 'Git',
+  },
 ];
 
 export default skills;

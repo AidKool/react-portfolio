@@ -1,9 +1,18 @@
 import React from 'react';
 
+import Qualifications from '../Components/Qualifications';
+import Skills from '../Components/Skills';
+
 function Resume() {
   return (
     <section className="resume-section is-flex is-align-items-center is-justify-content-center mx-auto">
-      <div className="container is-flex is-flex-direction-column is-vcentered px-3">some content</div>
+      <div className="container is-flex is-flex-direction-column is-vcentered is-centered px-3">
+        <Qualifications />
+        <Skills />
+        <p className="has-text-centered mt-5">
+          Download my CV <a href="#">here</a>
+        </p>
+      </div>
     </section>
   );
 }
