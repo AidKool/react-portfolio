@@ -39,7 +39,7 @@ function Navigation({ currentPage, setCurrentPage }) {
                   setCurrentPage('about');
                   toggleMenu();
                 }}>
-                About me
+                About
               </a>
             </li>
             <li className="navbar-item">
