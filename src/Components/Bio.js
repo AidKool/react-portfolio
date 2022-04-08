@@ -1,8 +1,11 @@
 import React from 'react';
 
+import '../assets/scss/bio.scss';
+
 function Bio() {
   return (
-    <article className="px-6">
+    <article className="px-3">
+      <header className="is-size-4 has-text-weight-bold">A more detailed bio</header>
       <p className="has-text-justified">I was born and raised in Barcelona and now I&rsquo;m living in Salford, UK.</p>
       <p className="mt-2 has-text-justified">
         I hold a degree in Electronic Engineering from the university <a href="https://www.upc.edu/en">UPC</a> and after

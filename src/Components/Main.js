@@ -20,7 +20,7 @@ function Main({ currentPage }) {
     return <Resume />;
   }
 
-  return <>{renderPage()}</>;
+  return <main>{renderPage()}</main>;
 }
 
 Main.propTypes = {
