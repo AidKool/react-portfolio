@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import '../assets/scss/navigation.scss';
+
 function Navigation({ currentPage, setCurrentPage }) {
   const [showMenu, setShowMenu] = React.useState(false);
 
@@ -9,7 +11,7 @@ function Navigation({ currentPage, setCurrentPage }) {
   }
 
   return (
-    <nav className="navbar is-light" role="navigation" aria-label="main navigation">
+    <nav className="navbar is-dark" role="navigation" aria-label="main navigation">
       <div className="container px-2">
         <div className="navbar-brand">
           <div
@@ -27,25 +29,49 @@ function Navigation({ currentPage, setCurrentPage }) {
           </div>
         </div>
 
-        <div className={showMenu ? 'navbar-menu is-active' : 'navbar-menu'}>
-          <ul className="navbar-end">
-            <li className={currentPage === 'about' ? 'has-background-dark navbar-item' : 'navbar-item'}>
-              <a href="#about" onClick={() => setCurrentPage('about')}>
+        <div className={showMenu ? 'navbar-menu is-active py-0 is-shadowless' : 'navbar-menu'}>
+          <ul className="navbar-end has-background-dark">
+            <li className="navbar-item">
+              <a
+                href="#about"
+                className={currentPage === 'about' ? 'has-text-white active' : 'has-text-white'}
+                onClick={() => {
+                  setCurrentPage('about');
+                  toggleMenu();
+                }}>
                 About me
               </a>
             </li>
-            <li className={currentPage === 'portfolio' ? 'has-background-dark navbar-item' : 'navbar-item'}>
-              <a href="#portfolio" onClick={() => setCurrentPage('portfolio')}>
+            <li className="navbar-item">
+              <a
+                href="#portfolio"
+                className={currentPage === 'portfolio' ? 'has-text-white active' : 'has-text-white'}
+                onClick={() => {
+                  setCurrentPage('portfolio');
+                  toggleMenu();
+                }}>
                 Portfolio
               </a>
             </li>
-            <li className={currentPage === 'contact' ? 'has-background-dark navbar-item' : 'navbar-item'}>
-              <a href="#contact" onClick={() => setCurrentPage('contact')}>
+            <li className="navbar-item">
+              <a
+                href="#contact"
+                className={currentPage === 'contact' ? 'has-text-white active' : 'has-text-white'}
+                onClick={() => {
+                  setCurrentPage('contact');
+                  toggleMenu();
+                }}>
                 Contact
               </a>
             </li>
-            <li className={currentPage === 'resume' ? 'has-background-dark navbar-item' : 'navbar-item'}>
-              <a href="#resume" onClick={() => setCurrentPage('resume')}>
+            <li className="navbar-item">
+              <a
+                href="#resume"
+                className={currentPage === 'resume' ? 'has-text-white active' : 'has-text-white'}
+                onClick={() => {
+                  setCurrentPage('resume');
+                  toggleMenu();
+                }}>
                 Resume
               </a>
             </li>

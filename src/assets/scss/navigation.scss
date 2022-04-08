@@ -1,0 +1,19 @@
+@import './colors.scss';
+
+li.navbar-item > a {
+  position: relative;
+}
+
+li.navbar-item > a:hover {
+  color: $yellow !important;
+}
+
+li.navbar-item > a.active:after {
+  content: "";
+  position: absolute;
+  background-color: $yellow;
+  height: 3px;
+  width: 100%;
+  left: 0;
+  bottom: -5px;
+}
