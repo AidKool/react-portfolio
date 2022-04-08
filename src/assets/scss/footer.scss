@@ -1,0 +1,13 @@
+@import './colors.scss';
+
+footer > .container {
+  row-gap: 0.1rem;
+}
+
+.social-media {
+  column-gap: 1rem;
+}
+
+.social-media-icon:hover {
+transform: scale(1.15);
+}
