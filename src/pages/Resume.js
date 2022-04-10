@@ -10,7 +10,13 @@ function Resume() {
         <Qualifications />
         <Skills />
         <p className="has-text-centered mt-5">
-          Download my CV <a href="https://u.pcloud.link/publink/show?code=XZYvMVVZUaqCRN4Oqn0qovRBwHNWOJAsFbMX">here</a>
+          Download my CV{' '}
+          <a
+            href="https://u.pcloud.link/publink/show?code=XZYvMVVZUaqCRN4Oqn0qovRBwHNWOJAsFbMX"
+            target="_blank"
+            rel="noreferrer">
+            here
+          </a>
         </p>
       </div>
     </section>
