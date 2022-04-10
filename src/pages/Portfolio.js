@@ -6,7 +6,7 @@ import '../assets/scss/portfolio.scss';
 
 function Portfolio() {
   return (
-    <section className="portfolio-section mx-auto py-5">
+    <section className="portfolio-section">
       <div className="container">
         <ul className="projects columns is-multiline px-5">
           {projects.map((project) => (
