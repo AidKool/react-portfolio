@@ -3,30 +3,35 @@ import React from 'react';
 import { FaRegUser, FaEnvelope } from 'react-icons/fa';
 import '../assets/scss/contact.scss';
 
-function Contact() {
-  const [username, setUsername] = React.useState('');
-  const [email, setEmail] = React.useState('');
-  const [message, setMessage] = React.useState('');
+import validateEmail from '../utils/validateEmail';
 
-  function handleInputChange(event) {
-    const { name, value } = event.target;
-    if (name === 'username') {
-      return setUsername(value);
+function Contact() {
+  const [formState, setFormState] = React.useState();
+  const [errorMessage, setErrorMessage] = React.useState('');
+
+  function handleBlur(event) {
+    if (event.target.name === 'email') {
+      const isValid = validateEmail(event.target.value);
+
+      if (!isValid) {
+        setErrorMessage('Your email is invalid.');
+      } else {
+        setErrorMessage('');
+      }
+    } else if (!event.target.value.length) {
+      setErrorMessage(`${event.target.name} is required`);
+    } else {
+      setErrorMessage('');
     }
-    if (name === 'email') {
-      return setEmail(value);
+
+    if (!errorMessage) {
+      setFormState({ ...formState, [event.target.name]: event.target.value });
     }
-    return setMessage(value);
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log('name:', username);
-    console.log('email:', email);
-    console.log('message:', message);
-    setUsername('');
-    setEmail('');
-    setMessage('');
+    setErrorMessage('Message sent');
   }
 
   return (
@@ -44,7 +49,7 @@ function Contact() {
                   className="input"
                   type="text"
                   placeholder="Type your name here"
-                  onChange={handleInputChange}
+                  onBlur={handleBlur}
                 />
                 <span className="icon is-small is-left">
                   <FaRegUser />
@@ -62,7 +67,7 @@ function Contact() {
                   className="input"
                   type="text"
                   placeholder="Type your email here"
-                  onChange={handleInputChange}
+                  onBlur={handleBlur}
                 />
                 <span className="icon is-small is-left">
                   <FaEnvelope />
@@ -77,9 +82,10 @@ function Contact() {
               name="message"
               className="textarea"
               placeholder="Let's stay in touch!"
-              onChange={handleInputChange}
+              onBlur={handleBlur}
             />
           </label>
+          {errorMessage && <p className="form-message">{errorMessage}</p>}
           <div className="field mt-3">
             <div className="control">
               <button className="button is-link" type="submit">
