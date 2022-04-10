@@ -1,17 +1,24 @@
-@import './colors.scss';
+// colors
+$red: #BE1A2C;
+
+@media screen and (max-width: 1024px) {
+  .navbar-menu {
+    margin-right: 0 !important;
+  }
+}
 
 li.navbar-item > a {
   position: relative;
 }
 
 li.navbar-item > a:hover {
-  color: $yellow !important;
+  color: $red !important;
 }
 
 li.navbar-item > a.active:after {
   content: "";
   position: absolute;
-  background-color: $yellow;
+  background-color: $red;
   height: 3px;
   width: 100%;
   left: 0;

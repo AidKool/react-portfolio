@@ -12,7 +12,7 @@ function Navigation({ currentPage, setCurrentPage }) {
 
   return (
     <nav className="navbar is-dark" role="navigation" aria-label="main navigation">
-      <div className="container px-2">
+      <div className="container">
         <div className="navbar-brand">
           <div
             role="button"
