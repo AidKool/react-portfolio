@@ -10,7 +10,7 @@ function Resume() {
         <Qualifications />
         <Skills />
         <p className="has-text-centered mt-5">
-          Download my CV <a href="#">here</a>
+          Download my CV <a href="https://u.pcloud.link/publink/show?code=XZYvMVVZUaqCRN4Oqn0qovRBwHNWOJAsFbMX">here</a>
         </p>
       </div>
     </section>
