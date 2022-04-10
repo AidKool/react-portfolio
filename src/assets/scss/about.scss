@@ -4,7 +4,7 @@
   }
 }
 
-.container {
+.about-section > .container {
   row-gap: 3rem;
 }
 
@@ -44,12 +44,6 @@
 img.profile-picture {
   width: 100%;
   max-width: 250px;
-}
-
-@media screen and (max-width: 576px) {
-  h1, header, p {
-    transform: scale(0.9);
-  }
 }
 
 .full-stack {
