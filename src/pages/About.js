@@ -1,24 +1,31 @@
 import React from 'react';
 
-import Facts from '../Components/Facts';
 import Bio from '../Components/Bio';
-import profilePicture from '../assets/images/profile-picture.png';
 
 import '../assets/scss/about.scss';
 
 function About() {
+  const intro = "Hi, I'm Jordi";
   return (
-    <section className="about-section is-flex is-align-items-center is-justify-content-center mx-auto">
-      <div className="container px-3">
-        <section className="columns is-centered">
-          <div className="column is-3-tablet">
-            <figure className="profile-picture is-flex is-justify-content-center">
-              <img src={profilePicture} alt="me" />
-            </figure>
-            <h1 className="title has-text-centered my-4">Jordi</h1>
+    <section className="about-section is-flex is-centered">
+      <div className="container is-flex is-flex-direction-column">
+        <section className="columns is-centered intro-container">
+          <div className="column is-6-tablet is-flex is-flex-direction-column is-justify-content-center">
+            <h1 className="intro my-4">{intro}</h1>
+            <p className="tagline my-0">
+              a <span className="full-stack">Full Stack Developer</span>
+              <br />
+              based in Manchester
+            </p>
           </div>
-          <div className="column is-4-tablet is-flex is-flex-direction-column is-align-items-center">
-            <Facts />
+          <div className="column is-6-tablet">
+            <figure className="profile-picture is-flex is-justify-content-center">
+              <img
+                className="profile-picture"
+                src="https://res.cloudinary.com/dxe6c1nwr/image/upload/q_auto:good/v1649518225/me_o04xb9.png"
+                alt="me"
+              />
+            </figure>
           </div>
         </section>
         <section className="is-flex is-justify-content-center">

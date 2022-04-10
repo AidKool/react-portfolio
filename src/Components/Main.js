@@ -6,6 +6,8 @@ import Portfolio from '../pages/Portfolio';
 import Contact from '../pages/Contact';
 import Resume from '../pages/Resume';
 
+import '../assets/scss/main.scss';
+
 function Main({ currentPage }) {
   function renderPage() {
     if (currentPage === 'about') {
@@ -20,7 +22,7 @@ function Main({ currentPage }) {
     return <Resume />;
   }
 
-  return <main>{renderPage()}</main>;
+  return <main >{renderPage()}</main>;
 }
 
 Main.propTypes = {

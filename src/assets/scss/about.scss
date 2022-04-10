@@ -3,3 +3,56 @@
     margin-top: 12px;
   }
 }
+
+.container {
+  row-gap: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    row-gap: 0.5rem;
+  }
+
+  .intro-container {
+   flex-direction: column-reverse;
+   display: flex;
+  }
+}
+
+.intro {
+  font-size: 4rem;
+}
+
+@media screen and (max-width: 768px) {
+  .intro {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}
+
+.tagline {
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .tagline {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+img.profile-picture {
+  width: 100%;
+  max-width: 250px;
+}
+
+@media screen and (max-width: 576px) {
+  h1, header, p {
+    transform: scale(0.9);
+  }
+}
+
+.full-stack {
+  font-weight: 900;
+  color: #BE1A2C;
+}

@@ -1,7 +1,5 @@
 import React from 'react';
 import './assets/scss/bulma.scss';
-import './assets/scss/reset.scss';
-import './assets/scss/common.scss';
 
 import Header from './Components/Header';
 import Main from './Components/Main';
