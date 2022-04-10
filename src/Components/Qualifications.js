@@ -10,21 +10,19 @@ function Qualifications() {
       <header className="has-text-centered title">Qualifications</header>
       <ul className="qualifications-list">
         {qualifications.map((qualification, index) => (
-          <li key={qualification.id} className={index > 0 ? 'list-item mt-2' : 'list-item'}>
-            <article>
+          <li key={qualification.id} className={index > 0 ? 'card mt-2' : 'card'}>
+            <article className="card-content">
               <header className="has-text-weight-bold">{qualification.title}</header>
-              <main>
+              <p>
+                {qualification.school}: {qualification.date}
+              </p>
+              {qualification.certificate === 'pending' ? (
+                <p>No certificate available</p>
+              ) : (
                 <p>
-                  {qualification.school}: {qualification.date}
+                  View my <a href={qualification.certificate}>certificate</a>
                 </p>
-                {qualification.certificate === 'pending' ? (
-                  <p>No certificate available</p>
-                ) : (
-                  <p>
-                    View my <a href={qualification.certificate}>certificate</a>
-                  </p>
-                )}
-              </main>
+              )}
             </article>
           </li>
         ))}
