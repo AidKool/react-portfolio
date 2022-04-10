@@ -30,10 +30,10 @@ function Contact() {
   }
 
   return (
-    <section className="contact-section mx-auto is-flex is-align-items-center">
-      <div className="container">
-        <h2 className="has-text-centered title">Drop me a message!</h2>
-        <form className="contact-form mx-auto" onSubmit={handleSubmit}>
+    <section className="contact-section">
+      <div className="container is-flex is-flex-direction-column is-align-items-center is-justify-content-center">
+        <h2 className="has-text-centered title">Drop me a message</h2>
+        <form className="contact-form" onSubmit={handleSubmit}>
           <div className="field">
             <label htmlFor="name" className="label">
               Your name
