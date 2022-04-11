@@ -12,6 +12,7 @@ function Portfolio() {
           {projects.map((project) => (
             <Project
               key={project.id}
+              id={project.id}
               github={project.github}
               live={project.live}
               image={project.image}
