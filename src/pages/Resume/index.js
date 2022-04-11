@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Qualifications from '../Components/Qualifications';
-import Skills from '../Components/Skills';
+import Qualifications from '../../Components/Qualifications';
+import Skills from '../../Components/Skills';
 
 function Resume() {
   return (

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Project from '../Components/Project';
-import projects from '../data/projects';
-import '../assets/scss/portfolio.scss';
+import Project from '../../Components/Project';
+import projects from '../../data/projects';
+import './portfolio.scss';
 
 function Portfolio() {
   return (

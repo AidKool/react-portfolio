@@ -1,8 +1,8 @@
 import React from 'react';
 
-import qualifications from '../data/qualifications';
+import qualifications from '../../data/qualifications';
 
-import '../assets/scss/qualifications.scss';
+import './qualifications.scss';
 
 function Qualifications() {
   return (

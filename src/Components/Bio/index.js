@@ -1,10 +1,10 @@
 import React from 'react';
 
-import '../assets/scss/bio.scss';
+import './bio.scss';
 
 function Bio() {
   return (
-    <article className="">
+    <article>
       <header className="is-size-4 has-text-weight-bold">About me</header>
       <p className="bio-paragraph">I was born and raised in Barcelona and now I&rsquo;m living in Manchester, UK.</p>
       <p className="mt-2 bio-paragraph">

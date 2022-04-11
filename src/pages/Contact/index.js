@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { FaRegUser, FaEnvelope } from 'react-icons/fa';
-import '../assets/scss/contact.scss';
+import './contact.scss';
 
-import validateEmail from '../utils/validateEmail';
+import validateEmail from '../../utils/validateEmail';
 
 function Contact() {
   const [formState, setFormState] = React.useState();

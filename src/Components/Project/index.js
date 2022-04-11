@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { FiGithub, FiLink } from 'react-icons/fi';
-import '../assets/scss/project.scss';
+
+import './project.scss';
 
 function Project({ id, github, live, image, header, description }) {
   return (

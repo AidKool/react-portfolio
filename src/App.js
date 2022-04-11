@@ -1,5 +1,5 @@
 import React from 'react';
-import './assets/scss/bulma.scss';
+import './bulma.scss';
 
 import Header from './Components/Header';
 import Main from './Components/Main';

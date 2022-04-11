@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import About from '../pages/About';
-import Portfolio from '../pages/Portfolio';
-import Contact from '../pages/Contact';
-import Resume from '../pages/Resume';
+import About from '../../pages/About';
+import Portfolio from '../../pages/Portfolio';
+import Contact from '../../pages/Contact';
+import Resume from '../../pages/Resume';
 
-import '../assets/scss/main.scss';
+import './main.scss';
 
 function Main({ currentPage }) {
   function renderPage() {
@@ -22,7 +22,7 @@ function Main({ currentPage }) {
     return <Resume />;
   }
 
-  return <main >{renderPage()}</main>;
+  return <main>{renderPage()}</main>;
 }
 
 Main.propTypes = {

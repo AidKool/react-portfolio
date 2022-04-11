@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Bio from '../Components/Bio';
+import Bio from '../../Components/Bio';
 
-import '../assets/scss/about.scss';
+import './about.scss';
 
 function About() {
   const intro = "Hi, I'm Jordi";

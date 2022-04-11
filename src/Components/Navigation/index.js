@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import '../assets/scss/navigation.scss';
+import './navigation.scss';
 
 function Navigation({ currentPage, setCurrentPage }) {
   const [showMenu, setShowMenu] = React.useState(false);

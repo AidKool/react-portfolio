@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Navigation from './Navigation';
+import Navigation from '../Navigation';
 
 function Header({ currentPage, setCurrentPage }) {
   return (
