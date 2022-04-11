@@ -17,7 +17,7 @@ function Navigation({ currentPage, setCurrentPage }) {
           <div
             role="button"
             tabIndex="0"
-            className="navbar-burger"
+            className={showMenu ? 'navbar-burger is-active' : 'navbar-burger'}
             aria-label="menu"
             aria-expanded="false"
             data-target="navbar-menu"
