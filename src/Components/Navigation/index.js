@@ -14,8 +14,8 @@ function Navigation({ currentPage, setCurrentPage }) {
     <nav className="navbar is-dark" role="navigation" aria-label="main navigation">
       <div className="container">
         <div className="navbar-brand">
-          <div
-            role="button"
+          <button
+            type="button"
             tabIndex="0"
             className={showMenu ? 'navbar-burger is-active' : 'navbar-burger'}
             aria-label="menu"
@@ -26,7 +26,7 @@ function Navigation({ currentPage, setCurrentPage }) {
             <span aria-hidden="true" />
             <span aria-hidden="true" />
             <span aria-hidden="true" />
-          </div>
+          </button>
         </div>
 
         <div className={showMenu ? 'navbar-menu is-active py-0 is-shadowless' : 'navbar-menu'}>
@@ -37,7 +37,7 @@ function Navigation({ currentPage, setCurrentPage }) {
                 className={currentPage === 'about' ? 'has-text-white active' : 'has-text-white'}
                 onClick={() => {
                   setCurrentPage('about');
-                  toggleMenu();
+                  setShowMenu(false);
                 }}>
                 About
               </a>
@@ -48,7 +48,7 @@ function Navigation({ currentPage, setCurrentPage }) {
                 className={currentPage === 'portfolio' ? 'has-text-white active' : 'has-text-white'}
                 onClick={() => {
                   setCurrentPage('portfolio');
-                  toggleMenu();
+                  setShowMenu(false);
                 }}>
                 Portfolio
               </a>
@@ -59,7 +59,7 @@ function Navigation({ currentPage, setCurrentPage }) {
                 className={currentPage === 'contact' ? 'has-text-white active' : 'has-text-white'}
                 onClick={() => {
                   setCurrentPage('contact');
-                  toggleMenu();
+                  setShowMenu(false);
                 }}>
                 Contact
               </a>
@@ -70,7 +70,7 @@ function Navigation({ currentPage, setCurrentPage }) {
                 className={currentPage === 'resume' ? 'has-text-white active' : 'has-text-white'}
                 onClick={() => {
                   setCurrentPage('resume');
-                  toggleMenu();
+                  setShowMenu(false);
                 }}>
                 Resume
               </a>
