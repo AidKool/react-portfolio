@@ -5,7 +5,7 @@ import { FiGithub, FiLink } from 'react-icons/fi';
 
 import './project.scss';
 
-function Project({ id, github, live, image, header, description }) {
+function Project({ id, github, live, image, header, description, onComplete }) {
   return (
     <li className="project-item column is-6-tablet pt-2 pb-0" key={id}>
       <div className="project-links is-flex">
@@ -26,7 +26,7 @@ function Project({ id, github, live, image, header, description }) {
       </div>
       <article>
         <figure>
-          <img src={image} className="project-image" alt={header} />
+          <img src={image} className="project-image" alt={header} onLoad={onComplete} />
         </figure>
         <div className="description has-text-centered p-2">
           <header className="has-text-weight-bold mb-2">{header}</header>
@@ -44,6 +44,7 @@ Project.propTypes = {
   image: PropTypes.string.isRequired,
   header: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  onComplete: PropTypes.func.isRequired,
 };
 
 export default Project;
