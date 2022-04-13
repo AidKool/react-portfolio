@@ -20,7 +20,10 @@ function Qualifications() {
                 <p>No certificate available</p>
               ) : (
                 <p>
-                  View my <a href={qualification.certificate}>certificate</a>
+                  View my{' '}
+                  <a href={qualification.certificate} target="_blank" rel="noreferrer">
+                    certificate
+                  </a>
                 </p>
               )}
             </article>
