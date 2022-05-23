@@ -10,8 +10,12 @@ function Footer() {
     <footer>
       <div className="container py-4 is-flex is-flex-direction-column is-align-items-center">
         <div className="social-media is-flex">
-          <FaGithubSquare className="is-size-3 has-text-black is-clickable social-media-icon" />
-          <FaLinkedin className="is-size-3 has-text-link is-clickable social-media-icon" />
+          <a href="https://github.com/AidKool" target="_blank" rel="noreferrer">
+            <FaGithubSquare className="is-size-3 has-text-black is-clickable social-media-icon" />
+          </a>
+          <a href="https://www.linkedin.com/in/jordilanau/" target="_blank" rel="noreferrer">
+            <FaLinkedin className="is-size-3 has-text-link is-clickable social-media-icon" />
+          </a>
         </div>
         <p className="has-text-centered is-size-7">{year} &copy; All Rights Reserved</p>
       </div>
