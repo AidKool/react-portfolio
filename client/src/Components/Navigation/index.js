@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import './navigation.scss';
 
 function Navigation({ currentPage, setCurrentPage }) {
-  const [showMenu, setShowMenu] = React.useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
   function toggleMenu() {
     setShowMenu(!showMenu);
@@ -31,6 +31,17 @@ function Navigation({ currentPage, setCurrentPage }) {
 
         <div className={showMenu ? 'navbar-menu is-active py-0 is-shadowless' : 'navbar-menu'}>
           <ul className="navbar-end has-background-dark">
+            <li className="navbar-item">
+              <a
+                href="#home"
+                className={currentPage === 'home' ? 'has-text-white active' : 'has-text-white'}
+                onClick={() => {
+                  setCurrentPage('home');
+                  setShowMenu(false);
+                }}>
+                Home
+              </a>
+            </li>
             <li className="navbar-item">
               <a
                 href="#about"

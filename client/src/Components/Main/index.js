@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Home from '../../pages/Home';
 import About from '../../pages/About';
 import Portfolio from '../../pages/Portfolio';
 import Contact from '../../pages/Contact';
@@ -19,7 +20,10 @@ function Main({ currentPage }) {
     if (currentPage === 'contact') {
       return <Contact />;
     }
-    return <Resume />;
+    if (currentPage === 'resume') {
+      return <Resume />;
+    }
+    return <Home />;
   }
 
   return <main>{renderPage()}</main>;

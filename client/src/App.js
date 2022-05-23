@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './bulma.scss';
 
 import Header from './Components/Header';
@@ -6,7 +6,7 @@ import Main from './Components/Main';
 import Footer from './Components/Footer';
 
 function App() {
-  const [currentPage, setCurrentPage] = React.useState('about');
+  const [currentPage, setCurrentPage] = useState('home');
 
   return (
     <>
