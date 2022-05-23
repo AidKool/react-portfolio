@@ -1,37 +1,50 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 import { FaRegUser, FaEnvelope } from 'react-icons/fa';
 import './contact.scss';
 
-import validateEmail from '../../utils/validateEmail';
-
 function Contact() {
-  const [formState, setFormState] = React.useState();
-  const [errorMessage, setErrorMessage] = React.useState('');
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+  const messageRef = useRef(null);
+  const [message, setMessage] = useState('');
+  const [success, setSuccess] = useState(false);
+  const [request, setRequest] = useState(false);
 
-  function handleBlur(event) {
-    if (event.target.name === 'email') {
-      const isValid = validateEmail(event.target.value);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setMessage('');
+      setSuccess(false);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, [success]);
 
-      if (!isValid) {
-        setErrorMessage('Your email is invalid.');
-      } else {
-        setErrorMessage('');
-      }
-    } else if (!event.target.value.length) {
-      setErrorMessage(`${event.target.name} is required`);
-    } else {
-      setErrorMessage('');
-    }
-
-    if (!errorMessage) {
-      setFormState({ ...formState, [event.target.name]: event.target.value });
-    }
-  }
-
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-    setErrorMessage('Message sent');
+    setRequest(true);
+
+    const requestContent = {
+      name: nameRef.current.value,
+      email: emailRef.current.value,
+      message: messageRef.current.value,
+    };
+
+    const response = await fetch('/contact', {
+      method: 'POST',
+      body: JSON.stringify(requestContent),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+      setSuccess(true);
+      setMessage('Message sent successfully');
+      nameRef.current.value = '';
+      emailRef.current.value = '';
+      messageRef.current.value = '';
+    } else {
+      setMessage('There was an error sending the message');
+    }
+    setRequest(false);
   }
 
   return (
@@ -44,12 +57,13 @@ function Contact() {
               Your name
               <p className="control has-icons-left">
                 <input
-                  id="username"
-                  name="username"
+                  id="name"
+                  name="name"
                   className="input"
                   type="text"
                   placeholder="Type your name here"
-                  onBlur={handleBlur}
+                  ref={nameRef}
+                  required="required"
                 />
                 <span className="icon is-small is-left">
                   <FaRegUser />
@@ -67,7 +81,8 @@ function Contact() {
                   className="input"
                   type="text"
                   placeholder="Type your email here"
-                  onBlur={handleBlur}
+                  ref={emailRef}
+                  required="required"
                 />
                 <span className="icon is-small is-left">
                   <FaEnvelope />
@@ -82,13 +97,14 @@ function Contact() {
               name="message"
               className="textarea"
               placeholder="Let's stay in touch!"
-              onBlur={handleBlur}
+              ref={messageRef}
+              required="required"
             />
           </label>
-          {errorMessage && <p className="form-message">{errorMessage}</p>}
+          {message && <p className={`${success ? 'has-text-success' : 'has-text-danger'}`}>{message}</p>}
           <div className="field mt-3">
             <div className="control">
-              <button className="button is-link" type="submit">
+              <button className={`button is-link ${request && 'is-loading'}`} type="submit">
                 Submit
               </button>
             </div>
