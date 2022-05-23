@@ -1,6 +1,5 @@
 {
   "name": "react-portfolio",
-  "homepage": "https://aidkool.github.io/react-portfolio",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001",
