@@ -128,3 +128,6 @@ yarn-error.log*
 
 # environment variables
 .env
+
+# react build
+client/build
