@@ -14,9 +14,6 @@ function Footer() {
           <FaLinkedin className="is-size-3 has-text-link is-clickable social-media-icon" />
         </div>
         <p className="has-text-centered is-size-7">{year} &copy; All Rights Reserved</p>
-        <a className="is-size-7 has-text-centered is-block" href="https://www.freepik.com/vectors/man">
-          Man vector created by studiogstock - www.freepik.com
-        </a>
       </div>
     </footer>
   );
