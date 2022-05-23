@@ -17,7 +17,7 @@ function Qualifications() {
                 {qualification.school}: {qualification.date}
               </p>
               {qualification.certificate === 'pending' ? (
-                <p>No certificate available</p>
+                <p>Awaiting results</p>
               ) : (
                 <p>
                   View my{' '}

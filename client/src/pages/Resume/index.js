@@ -12,7 +12,7 @@ function Resume() {
         <p className="has-text-centered mt-5">
           Download my CV{' '}
           <a
-            href="https://u.pcloud.link/publink/show?code=XZYvMVVZUaqCRN4Oqn0qovRBwHNWOJAsFbMX"
+            href="https://docs.google.com/document/d/1d1VYNuN4srvU36xZ4K3W7qmEP408WC8gxDqXAJbtORM/edit?usp=sharing"
             target="_blank"
             rel="noreferrer">
             here

@@ -1,15 +1,15 @@
 const skills = [
   {
     id: 1,
-    text: 'HTML5',
+    text: 'HTML / CSS',
   },
   {
     id: 2,
-    text: 'CSS/SCSS',
+    text: 'JavaScript',
   },
   {
     id: 3,
-    text: 'JavaScript',
+    text: 'TypeScript',
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const skills = [
   },
   {
     id: 10,
-    text: 'PWAs',
+    text: 'GraphQL',
   },
   {
     id: 11,
