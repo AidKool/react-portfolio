@@ -14,6 +14,9 @@ function Home() {
         <br />
         based in Manchester
       </p>
+      <p>
+        Get in touch at <a href="mailto:jordi.lanau@yahoo.com">jordi.lanau@yahoo.com</a>
+      </p>
     </div>
   );
 }
