@@ -33,8 +33,7 @@
     },
     "extends": [
       "react-app",
-      "react-app/jest",
-      "prettier"
+      "react-app/jest"
     ],
     "parserOptions": {
       "ecmaFeatures": {
@@ -43,9 +42,6 @@
       "ecmaVersion": "latest",
       "sourceType": "module"
     },
-    "plugins": [
-      "prettier"
-    ],
     "rules": {
       "react/jsx-filename-extension": [
         1,
@@ -69,8 +65,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "eslint-plugin-prettier": "^4.0.0"
   }
 }
