@@ -6,7 +6,7 @@
 
 A personal portfolio built using React and SCSS
 
-![portfolio](https://user-images.githubusercontent.com/73796715/162644078-a045c674-4ee3-47ed-82e9-62fe20547c86.png)
+![portfolio](https://user-images.githubusercontent.com/73796715/170042609-d847a5cf-9239-4d72-af64-b30f20253118.png)
 
 ## Table of Contents
 
